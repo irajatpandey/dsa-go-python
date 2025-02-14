@@ -1,7 +1,8 @@
 package main
 
 func main() {
-	arrayExample()
-	reverseArrayMain()
-	findLargestMain()
+	//arrayExample()
+	//reverseArrayMain()
+	//findLargestMain()
+	printSubArrayMain()
 }

@@ -8,7 +8,7 @@ func check(arr []int) bool {
 
     for i := 0; i < len(arr); i++ {
         // If current element is greater than the next element (cyclically), increment count
-        if arr[i] > arr[(i+1)%len(arr)] {
+        if arr[i] > arr[(i + 1) % len(arr)] {
             count++
         }
     }

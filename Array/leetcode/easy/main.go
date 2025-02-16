@@ -6,4 +6,5 @@ func main() {
 	findMaxConsecutiveOnesMain()
 	missing_number_main()
 	moveZeroesMain()
+	removeDuplicatesMain()
 }

@@ -7,4 +7,5 @@ func main() {
 	missing_number_main()
 	moveZeroesMain()
 	removeDuplicatesMain()
+	singleNumberMain()
 }

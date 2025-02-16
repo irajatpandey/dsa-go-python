@@ -5,4 +5,5 @@ func main() {
 	longestSubArrayWithKSumMain()
 	findMaxConsecutiveOnesMain()
 	missing_number_main()
+	moveZeroesMain()
 }

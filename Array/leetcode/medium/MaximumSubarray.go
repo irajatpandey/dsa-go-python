@@ -38,4 +38,5 @@ func maxSubArrayHelper() {
         result := maxSubArray(testCase)
         fmt.Printf("Test Case %d: %d\n", i+1, result)
     }
+	fmt.Println()
 }

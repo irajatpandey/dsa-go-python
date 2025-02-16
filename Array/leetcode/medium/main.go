@@ -10,4 +10,6 @@ func main() {
 	majorityElementHelper()
 	fmt.Println("MaxSumSubArray")
 	maxSubArrayHelper()
+	fmt.Println("StockBuyAndSell")
+	maxProfitHelper()
 }

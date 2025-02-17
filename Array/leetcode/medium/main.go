@@ -12,4 +12,8 @@ func main() {
 	maxSubArrayHelper()
 	fmt.Println("StockBuyAndSell")
 	maxProfitHelper()
+	fmt.Println("NextPermutation")
+	nextPermutationHelper()
+	fmt.Println("RearrangeArrayElementsBySign")
+	rearrangeArrayHelper()
 }

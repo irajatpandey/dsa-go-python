@@ -16,4 +16,6 @@ func main() {
 	nextPermutationHelper()
 	fmt.Println("RearrangeArrayElementsBySign")
 	rearrangeArrayHelper()
+	fmt.Println("LeadersInArray")
+	findLeadersHelper()
 }

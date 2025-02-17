@@ -18,4 +18,6 @@ func main() {
 	rearrangeArrayHelper()
 	fmt.Println("LeadersInArray")
 	findLeadersHelper()
+	fmt.Println("Set Matrix Zeroes")
+	setZeroesHelper()
 }

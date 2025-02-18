@@ -20,4 +20,6 @@ func main() {
 	findLeadersHelper()
 	fmt.Println("Set Matrix Zeroes")
 	setZeroesHelper()
+	fmt.Println("Rotate Image")
+	rotateHelper()
 }

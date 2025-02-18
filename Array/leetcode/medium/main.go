@@ -22,4 +22,6 @@ func main() {
 	setZeroesHelper()
 	fmt.Println("Rotate Image")
 	rotateHelper()
+	fmt.Println("Spiral Matrix")
+	spiralOrderHelper()
 }

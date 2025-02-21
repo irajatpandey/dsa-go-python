@@ -24,7 +24,7 @@ func main() {
 
 	// 4. String Repetition (Using a loop since Go doesn't have a direct string repetition operator)
 	fmt.Println(strings.Repeat(str1, 3)) // HelloHelloHello
-	fmt.Println(strings.Repeat(str2, 2)) // WorldWorld
+	fmt.Println(strings.Repeat(str2, 2)) // WorldWorld++++++++++++++++++
 
 	// 5. Slice a String
 	fmt.Println(myStr[0:5]) // Hello

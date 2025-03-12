@@ -11,14 +11,24 @@ def can_distribute(boards, max_load, num_painters):
 def minimize_max_painter_load(boards: list, num_painters: int):
     if num_painters > len(boards):
         return -1
-    lower_bound = max(boards)
-    upper_bound = sum(boards)
+    start = max(boards)
+    end = sum(boards)
     optimal_load = -1
-    while lower_bound <= upper_bound:
-        candidate_load = lower_bound + (upper_bound - lower_bound) // 2
+    while start <= end:
+        candidate_load = start + (end - start) // 2
         if can_distribute(boards, candidate_load, num_painters):
             optimal_load = candidate_load
-            upper_bound = candidate_load - 1
+            end = candidate_load - 1
         else:
-            lower_bound = candidate_load + 1
+            start = candidate_load + 1
     return optimal_load
+if __name__ == "__main__":
+    test_cases = [
+        ([10, 20, 30, 40], 2),
+        ([10, 10, 10, 10], 2),
+        ([10, 20, 30, 40, 50], 3)
+    ]
+    
+    for i, (boards, num_painters) in enumerate(test_cases, 1):
+        result = minimize_max_painter_load(boards, num_painters)
+        print(f"Test Case {i}: Minimum maximum load for {num_painters} painters is: {result}")

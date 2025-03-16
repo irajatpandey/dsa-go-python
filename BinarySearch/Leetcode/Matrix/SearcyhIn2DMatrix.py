@@ -10,6 +10,7 @@ Since columns repeat every n elements, taking modulo n gives the column number.
 
 
 """
+# Time Complexity : O(log(m * n))
 def searchMatrix(self, matrix, target):
     m, n = len(matrix), len(matrix[0])  # ✅ Rows and columns
     start, end = 0, (m * n) - 1

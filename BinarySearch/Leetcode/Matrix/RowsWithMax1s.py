@@ -11,7 +11,7 @@ class Solution:
                 end = mid - 1  # Move left
             else:
                 start = mid + 1  # Move right
-        return ans  # If no 1 is found, ans will be len(row)
+        return ans  # If no 1 is found, ans will be len(row) 
 
     def rowWithMax1s(self, arr):
         """Finds the row index with the maximum number of 1s"""

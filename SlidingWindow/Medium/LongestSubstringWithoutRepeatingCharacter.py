@@ -1,32 +1,20 @@
 #https://leetcode.com/problems/longest-substring-without-repeating-characters/
 class Solution:
-    def length_of_longest_substring(self, s):
-        """
-        Function to find the length of the longest substring 
-        without repeating characters.
-        """
-        left_ptr, right_ptr = 0, 0  # Sliding window pointers
-        max_length = 0  # Stores the maximum length of a unique substring
-        char_set = set()  # Set to store unique characters in the current window
-
-        if not s:
-            return 0  # Handle empty string case
-
-        while right_ptr < len(s):
-            # If duplicate character found, shrink the window from the left
-            while s[right_ptr] in char_set:
-                char_set.remove(s[left_ptr])
-                left_ptr += 1
-
-            # Add the new character to the set
-            char_set.add(s[right_ptr])
-
-            # Update the maximum length of unique substring found so far
-            max_length = max(max_length, right_ptr - left_ptr + 1)
-
-            # Expand the window by moving the right pointer
-            right_ptr += 1
-
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        left, right, max_length = 0, 0, 0
+        freq = [0] * 128  # Frequency array for ASCII characters
+        
+        while right < len(s):
+            freq[ord(s[right])] += 1  # Increment frequency of current character
+            
+            # If character appears more than once, shrink the window from the left
+            while freq[ord(s[right])] > 1:
+                freq[ord(s[left])] -= 1
+                left += 1  # Move left pointer forward
+            
+            max_length = max(max_length, right - left + 1)  # Update max length
+            right += 1  # Expand window by moving right pointer
+        
         return max_length
 
 

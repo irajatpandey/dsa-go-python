@@ -2,19 +2,14 @@
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         left, right, max_length = 0, 0, 0
-        freq = [0] * 128  # Frequency array for ASCII characters
-        
+        char_count = {}
         while right < len(s):
-            freq[ord(s[right])] += 1  # Increment frequency of current character
-            
-            # If character appears more than once, shrink the window from the left
-            while freq[ord(s[right])] > 1:
-                freq[ord(s[left])] -= 1
-                left += 1  # Move left pointer forward
-            
-            max_length = max(max_length, right - left + 1)  # Update max length
-            right += 1  # Expand window by moving right pointer
-        
+            char_count[s[right]] = char_count.get(s[right], 0) + 1 
+            while char_count[s[right]] > 1:
+                char_count[s[left]] -= 1
+                left += 1
+            max_length = max(max_length, right - left + 1)
+            right += 1
         return max_length
 
 

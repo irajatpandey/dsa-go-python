@@ -1,5 +1,6 @@
 
 #Better
+#Time Complexity : O(N) + O(N)
 def longestOnes(self, nums, k):
     left, right, max_len = 0, 0, 0
     zeroCount = 0
